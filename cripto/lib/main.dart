@@ -13,7 +13,7 @@ class MeuApp extends StatelessWidget {
       title: "MoedasBase",
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primarySwatch: Colors.yellow
+        primarySwatch:  Colors.green
       ),
       home: MoedasPage()  // PAGINA PRINCIPAL DO APLICATIVO
       ,
