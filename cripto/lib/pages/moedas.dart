@@ -1,4 +1,5 @@
 import 'package:app/model/moedaCripto.dart';
+import 'package:app/pages/moedas_detalhes_page.dart';
 import 'package:app/repositories/moeda_repository.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
@@ -45,7 +46,14 @@ class _MoedasPageState extends State<MoedasPage> {
     }
     
   }
-
+ mostrarDetalhes(MoedaCripto moeda){
+    Navigator.push(
+      context,
+       MaterialPageRoute(
+       builder: (_) => MoedasDetalhes(moeda: moeda),
+    ),
+    );
+ }
   @override
   Widget build(BuildContext context) {
     
@@ -86,6 +94,7 @@ class _MoedasPageState extends State<MoedasPage> {
                      }
                      });
                   } ,
+                  onTap: () => mostrarDetalhes(tabela[moeda]),
                 );
             
             
